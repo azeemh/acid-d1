@@ -1,0 +1,39 @@
+[package]
+name = "acid-d1"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "acid_d1"
+path = "src/lib.rs"
+
+[[bin]]
+name = "acidinfo"
+path = "src/bin/acidinfo.rs"
+
+[[bin]]
+name = "acidplay"
+path = "src/bin/acidplay.rs"
+
+[[bin]]
+name = "acidplay_tempo"
+path = "src/bin/acidplay_tempo.rs"
+
+[[bin]]
+name = "acidmix"
+path = "src/bin/acidmix.rs"
+
+[[bin]]
+name = "acidui"
+path = "src/bin/acidui.rs"
+
+[dependencies]
+cpal = "0.15"
+rustfft = "6"
+eframe = "0.29"
+egui = "0.29"
+symphonia = { version = "0.5", features = ["all"] }
+signalsmith-stretch = "0.1"
+pipewire = "0.8"
+pipewire-sys = "0.8"
+rayon = "1.10"
